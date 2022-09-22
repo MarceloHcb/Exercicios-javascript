@@ -91,9 +91,9 @@ console.log(menu);
 
 let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
 
-for (i = 0; i < groceryList.length; i += 1) {
-    console.log(groceryList[i])
-}
+
+const novo = groceryList.pop()
+console.log(novo)
 
 // FOR / OF
 
@@ -104,3 +104,14 @@ for( let name of names){
     console.log(name)
 }
 
+// WHILE
+
+function dice () { 
+    return Math.ceil(Math.random() * 6);
+}
+let d1 = dice();
+let d2 = dice();
+while (d1 === d2) {
+    d2 = dice();
+}
+console.log(d1)
