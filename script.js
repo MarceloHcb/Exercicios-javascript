@@ -11,8 +11,6 @@ let score = 10.89  // number literal
 let isValid = true  // boolean
 let name; // undefined
 let color = null //redefinição
-
-
 // +, - , * , /, **
 
 let salary = 3500
@@ -24,3 +22,16 @@ let salary = 3500
 
 salary ++
 console.log(salary)
+
+
+let patientId = 50;
+let isEnrolled = true;
+const patientInfo = {
+  firstName: 'Ana',
+  lastName: 'Santos',
+};
+const patientEmail = 'ana@email.com';
+console.log (typeof patientEmail)
+
+// If Else 
+
