@@ -86,3 +86,21 @@ console.log(menuServices);
 menu.push("Contato")
 
 console.log(menu);
+
+// LAÇO FOR 
+
+let groceryList = ['Arroz', 'Feijão', 'Alface', 'Melancia'];
+
+for (i = 0; i < groceryList.length; i += 1) {
+    console.log(groceryList[i])
+}
+
+// FOR / OF
+
+let names = ['João', 'Maria', 'Antônio', 'Margarida'];
+
+for( let name of names){
+    name+= " É meu nome ? "
+    console.log(name)
+}
+
