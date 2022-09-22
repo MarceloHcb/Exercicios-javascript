@@ -8,13 +8,13 @@ console.log(area)
 
 const notaPessoaCandidata = 40
 
-if(notaPessoaCandidata > 80){
+if (notaPessoaCandidata > 80) {
     console.log("parabéns você foi aprovada")
 }
-else if (notaPessoaCandidata < 80 && notaPessoaCandidata >= 60){
+else if (notaPessoaCandidata < 80 && notaPessoaCandidata >= 60) {
     console.log("Você está na nossa lista de espera")
 }
-else{
+else {
     console.log("Você foi reprovado")
 }
 // OPERADORES LÓGICOS
@@ -22,19 +22,19 @@ else{
 const currentHour = 13;
 let message;
 
-if(currentHour >= 22 ){
+if (currentHour >= 22) {
     message = "Não deveríamos comer nada, é hora de dormir";
 }
-else if (currentHour >= 18 && currentHour < 22){
+else if (currentHour >= 18 && currentHour < 22) {
     message = "Rango da noite, vamos jantar :D"
 }
-else if (currentHour >= 14 && currentHour <18){
+else if (currentHour >= 14 && currentHour < 18) {
     message = "Vamos fazer um bolo pro café da tarde"
 }
-else if (currentHour>11 && currentHour<14){
+else if (currentHour > 11 && currentHour < 14) {
     message = "Hora do almoço!!!"
 }
-else if (currentHour > 4 && currentHour < 11){
+else if (currentHour > 4 && currentHour < 11) {
     message = "Hmmm, cheiro de café recém-passado"
 }
 
@@ -75,3 +75,14 @@ switch (mes) {
         console.log("insira um mês do ano")
 }
 console.log(estacaoDoAno)
+
+// ARRAYS
+
+let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+let menuServices = menu[1];
+
+console.log(menuServices);
+
+menu.push("Contato")
+
+console.log(menu);
