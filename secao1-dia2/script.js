@@ -1,3 +1,13 @@
+let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
+let indexOfPortfolio = 0;
+for (let index = 0; index <menu.length; index +=1){
+    if(menu[index] === "Portfólio"){
+        indexOfPortfolio = index;
+    }
+}
+
+console.log("Index Portifólio = " ,indexOfPortfolio);
+
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let somaNumbers = 0;
 
