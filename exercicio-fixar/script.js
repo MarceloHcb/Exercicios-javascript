@@ -99,14 +99,14 @@ console.log(novo)
 
 let names = ['João', 'Maria', 'Antônio', 'Margarida'];
 
-for( let name of names){
-    name+= " É meu nome ? "
+for (let name of names) {
+    name += " É meu nome ? "
     console.log(name)
 }
 
 // WHILE
 
-function dice () { 
+function dice() {
     return Math.ceil(Math.random() * 6);
 }
 let d1 = dice();
@@ -116,3 +116,104 @@ while (d1 === d2) {
 }
 console.log(d1)
 
+// secao4.3 OBJETOS
+
+let player = {
+    name: "Marta",
+    lastName: "Silva",
+    age: 34,
+    medals: {
+        golden: 2,
+        silver: 3
+    }
+};
+console.log(`${player.name} de sobrenoma ${player.lastName}, Tem ${player.age} anos, e possui ${player['medals']['golden']} medalhas de ouro e ${player['medals']['silver']} medalhas de prata `)
+
+// FOR IN FOR OF
+
+let cars = ['Saab', 'Volvo', 'BMW'];
+
+for (let index in cars) {
+    console.log(index, cars[index]);
+}
+
+let car = {
+    type: 'Fiat',
+    model: '500',
+    color: 'white',
+};
+
+for (let index in car) {
+    console.log(index, car[index]);
+}
+
+// FOR OF     Já o for/of percorre os elementos dos objetos iteráveis através dos seus respectivos valores, e não dos índices como o for/in. Vejamos o exemplo:
+
+let food = ['hamburguer', 'bife', 'acarajé'];
+for (let value of food) {
+    console.log(value);
+};
+
+let namess = {
+    person1: 'João',
+    person2: 'Maria',
+    person3: 'Jorge',
+};
+
+for (let presentation in namess) {
+    console.log("Olá " + namess[presentation])
+}
+
+let carr = {
+    model: 'A3 Sedan',
+    manufacturer: 'Audi',
+    year: 2020
+};
+for (let value in carr) {
+    console.log(`${value} ${carr[value]}`)
+}
+
+//FUNÇÕES
+
+function somar(a, b) {
+    return (a + b)
+}
+function diminuir(a, b) {
+    return (a - b)
+}
+function multiplicar(a, b) {
+    return (a * b)
+}
+function dividir(a, b) {
+    return (a / b)
+}
+function modulo(a, b) {
+    return (a % b)
+}
+console.log(somar(10, 20))
+console.log(diminuir(10, 20))
+console.log(multiplicar(10, 20))
+console.log(dividir(10, 20))
+console.log(modulo(10, 20))
+
+function maior(a, b) {
+    if (a > b) {
+        return (a)
+    }
+    if (b > a) {
+        return (b)
+    }
+}
+console.log(maior(20, 60))
+
+function maior(a, b, c) {
+    if (a > b && a > c) {
+        return (a)
+    }
+    if (b > a && b > c) {
+        return (b)
+    } else {
+        return (c)
+    }
+}
+console.log(maior(20, 60, 85))
