@@ -216,4 +216,26 @@ function maior(a, b, c) {
         return (c)
     }
 }
+function triAngulo(a,b,c){
+    let resultado
+    if (a ===0 || b === 0 || c === 0){
+        resultado = "ângulo inválido!!"
+    }
+    else if(a+b+c === 180){
+        resultado = true
+    }else{
+        resultado = false
+    }
+    return(resultado)
+}
+console.log(triAngulo(80,10,90))
 console.log(maior(20, 60, 85))
+// FOR / IN
+
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+  };
+ console.log("Bem vinda, " + info.personagem)
+ console.log()
