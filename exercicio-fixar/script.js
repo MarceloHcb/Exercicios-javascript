@@ -173,6 +173,55 @@ for (let value in carr) {
     console.log(`${value} ${carr[value]}`)
 }
 
+// FOR / IN
+
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+};
+let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: "Christmas on Bear Mountain, Dell's Four Color Comics",
+    nota: "O último MacPatinhas"
+};
+for (valor in info) {
+    // console.log(valor)
+    // console.log(info[valor])   
+    for (valor in info2) {
+
+        console.log(info[valor] + " e " + info2[valor])
+    }
+
+}
+
+console.log("Bem vinda, " + info.personagem)
+
+
+// O livro favorito de Julia Pessoa se chama ‘O Pior Dia de Todos’”.
+let leitor = {
+    nome: 'Julia',
+    sobrenome: 'Pessoa',
+    idade: 21,
+    livrosFavoritos: [
+        {
+            titulo: 'O Pior Dia de Todos',
+            autor: 'Daniela Kopsch',
+            editora: 'Tordesilhas',
+        },
+        {
+            titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+            autor: 'JK Rowling',
+            editora: 'Rocco',
+        }
+    ],
+};
+let quantidadeLivros = leitor.livrosFavoritos.length;
+
+let nomeComposto = leitor.nome + " " + leitor.sobrenome
+console.log("O livro favorito de " + nomeComposto + " se chama" + " " + leitor.livrosFavoritos[0].titulo)
+console.log(leitor.nome + " tem " + quantidadeLivros + " livros favoritos")
+
 //FUNÇÕES
 
 function somar(a, b) {
@@ -216,26 +265,81 @@ function maior(a, b, c) {
         return (c)
     }
 }
-function triAngulo(a,b,c){
+function triAngulo(a, b, c) {
     let resultado
-    if (a ===0 || b === 0 || c === 0){
+    if (a === 0 || b === 0 || c === 0) {
         resultado = "ângulo inválido!!"
     }
-    else if(a+b+c === 180){
+    else if (a + b + c === 180) {
         resultado = true
-    }else{
+    } else {
         resultado = false
     }
-    return(resultado)
+    return (resultado)
 }
-console.log(triAngulo(80,10,90))
+console.log(triAngulo(80, 10, 90))
 console.log(maior(20, 60, 85))
-// FOR / IN
 
-let info = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-  };
- console.log("Bem vinda, " + info.personagem)
- console.log()
+// EXERCÍCIO FUNÇÕES
+
+function palindromo(param) {
+
+    if (param.split("").reverse("").join("") === param) {
+        console.log(true)
+    } else {
+        console.log(false)
+    }
+}
+palindromo("arara")
+
+
+function maiorIndex() {
+    let array = [2, 3, 6, 7, 10, 1]
+    let maior = 0;
+    for (let index = 0; index < array.length; index += 1) {
+        if (array[maior]< array[index]){
+            maior = index
+        }
+    }
+    console.log(maior)
+}
+maiorIndex()
+
+
+ function menorIndex(){
+    let array = [2, 4, 6, 7, 10, 0, -3];
+    let menor = 0;
+     for (let index in array){
+        if (array[menor] > array[index]) {
+            menor = index
+        }
+     }
+     console.log(menor)
+ }
+ menorIndex()
+
+ function maiorCaracter(){
+    let array = ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];
+    let maiorPalavra = [array[0]];
+    for (let index = 0; index < array.length; index +=1){
+         if (array[index].length > maiorPalavra.length){
+             maiorPalavra = array[index]
+         }
+       
+    }
+    console.log(maiorPalavra)
+ }
+ maiorCaracter()
+
+ function arrayDeInteiros(){
+    let array = [2, 3, 2, 5, 8, 2, 3];
+    let array2 = [2, 3, 2, 5, 8, 2, 3];
+    let repetidos = []
+    for (numeros in array){
+        if(array[numeros] === array[numeros]){
+            repetidos.push(array[numeros])
+        }
+    }
+    console.log(repetidos)
+ }
+arrayDeInteiros()
