@@ -10,6 +10,7 @@ function sumFunction(array) {
 console.log(sumFunction([1, 2, 3, 4, 5]));
 console.log(sumFunction([10, 20, 30]));
 
+
 function nbaChampion(lakers, celtics) {
     let countLakers = 0;
     let countCeltics = 0;
