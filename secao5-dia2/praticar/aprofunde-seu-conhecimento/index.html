@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const body = document.createElement("body")
+        function createHtml() {
+            crateTitle()
+            createMain()
+            createSection()
+            createP()
+        }
+        createHtml()
+        function crateTitle() {
+            h1 = document.createElement("h1")
+            h1.id = "titulo"
+            document.body.appendChild(h1)
+            h1.innerHTML = "oi"
+            document.getElementById("titulo")
+            titulo.style.color = "red"
+        }
+        function createMain(){
+            const main = document.createElement("main")
+            main.setAttribute("class", "main-content")            
+            document.body.appendChild(main)
+        }
+
+        function createSection(){
+            const main = document.querySelector("main")
+            const section = document.createElement("section")
+            section.className ="center-content"
+            main.appendChild(section)
+        }
+        function createP(){
+            const section =  document.querySelector(".center-content")
+            const p = document.createElement("p")
+            p.innerHTML = "Criando parágrafo"
+            p.style.textAlign= "center"
+            p.style.color = "blue"
+            section.appendChild(p)
+        }
+        function
+    </script>
+</body>
+
+</html>
