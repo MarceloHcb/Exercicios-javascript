@@ -70,13 +70,15 @@
             createImg()
             createUl()
             createH3()
+            removerChild()
+            centerSection()
         }
         createHtml()
         function crateTitle() {
             h1 = document.createElement("h1")
             h1.id = "titulo"
-            document.body.appendChild(h1)
-            h1.innerHTML = "oi"
+            h1.className = "title"
+            document.body.appendChild(h1)            
             document.getElementById("titulo")
             titulo.style.color = "red"
         }
@@ -123,23 +125,33 @@
             const numbers = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
             const section = document.querySelector(".right-content")
             const ul = document.createElement("ul")
-            const li = document.createElement("li")
-            ul.appendChild(li)
+            let li;
             for (let index = 0; index < numbers.length; index += 1) {
+                li = document.createElement("li")
                 li.innerHTML += numbers[index]
+                ul.appendChild(li)
             }
             section.appendChild(ul)
         }
         function createH3() {
             const main = document.querySelector("main")
-                let h3;     
-            for (let index = 0; index < 3; index += 1) {                
-                 h3 = document.createElement("h3")                 
+            let h3;
+            for (let index = 0; index < 3; index += 1) {
+                h3 = document.createElement("h3")
+                h3.className = "description"
                 main.appendChild(h3)
                 h3.innerHTML = "opa"
             }
-                       
         }
+        function removerChild(){
+            const main = document.querySelector("main")
+            let section = document.querySelector(".left-content")            
+            main.removeChild(section)
+        }
+        function centerSection(){
+
+        }
+
     </script>
 </body>
 
