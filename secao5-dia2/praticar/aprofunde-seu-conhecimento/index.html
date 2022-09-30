@@ -72,6 +72,8 @@
             createH3()
             removerChild()
             centerSection()
+            changeFatherColor()
+            removeTwoElements()
         }
         createHtml()
         function crateTitle() {
@@ -149,7 +151,16 @@
             main.removeChild(section)
         }
         function centerSection(){
-
+            const section = document.querySelector(".right-content")
+            section.style.margin = "auto"
+        }
+        function changeFatherColor(){
+            const section = document.querySelector(".center-content")
+            section.parentNode.style.background = "green"
+        }
+        function removeTwoElements(){
+           
+            
         }
 
     </script>
