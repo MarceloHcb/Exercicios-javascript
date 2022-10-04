@@ -18,22 +18,31 @@ function createNumbersCalendar() {
     const month = document.querySelector(".month-container")
     const ul = document.getElementsByTagName("ul")[1]
 
-
-
-
     console.log(ul)
     for (let index = 0; index < decemberDaysList.length; index++) {
         const li = document.createElement("li")
+
         ul.id = "days"
         li.classList.add("day")
         ul.appendChild(li)
-        li.innerText = decemberDaysList[index]
-        
+        let day = decemberDaysList[index]
+        li.innerText = day
+        if (day === 25) {
+            li.classList.add("holliday")
+            li.classList.add("friday")
+        }
+        else if (day === 24 || day === 31) {
+            li.classList.add("holliday")
+        } else if (day === 4 || day === 11 || day === 18) {
+            li.classList.add("friday")
+        }
+        else {
 
+        }
     }
-    const li = document.querySelectorAll(".day")
-    
-  
+
+
+
 
     // console.log(month)
 
