@@ -17,7 +17,17 @@ for (let index = 0; index < ingredientItems.length; index += 1) {
 
     let ingredientsListItems = document.createElement("li");
     ingredientsListItems.innerText = ingredient;
+    ingredientsListItems.className = "ingredients-list-items"
     
     ingredientsList.appendChild(ingredientsListItems)
 }
+// REMOVENDO ITENS
 
+let ingredientsListItems = document.querySelectorAll(".ingredients-list-items");
+
+for (let index = 0; index < ingredientsListItems.length; index += 1){
+    let element = ingredientsListItems[index]
+    if (element.innerText.includes("toucinho")){
+        ingredientsList.removeChild(element)
+    }
+}

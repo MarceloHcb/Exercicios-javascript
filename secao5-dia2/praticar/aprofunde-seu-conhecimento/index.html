@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+
+        .main-content .left-content {
+            background-color: green;
+            width: 60%;
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .main-content .left-content .small-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 100%;
+        }
+
+        .main-content .right-content {
+            background-color: blue;
+            width: 60%;
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .main-content .description {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const body = document.createElement("body")
+        function createHtml() {
+            crateTitle()
+            createMain()
+            createSection()
+            createP()
+            createLeftSection()
+            createRightSection()
+            createImg()
+            createUl()
+            createH3()
+            removerChild()
+            centerSection()
+            changeFatherColor()
+            removeTwoElements()
+        }
+        createHtml()
+        function crateTitle() {
+            h1 = document.createElement("h1")
+            h1.id = "titulo"
+            h1.className = "title"
+            document.body.appendChild(h1)            
+            document.getElementById("titulo")
+            titulo.style.color = "red"
+        }
+        function createMain() {
+            const main = document.createElement("main")
+            main.setAttribute("class", "main-content")
+            document.body.appendChild(main)
+        }
+
+        function createSection() {
+            const main = document.querySelector("main")
+            const section = document.createElement("section")
+            section.className = "center-content"
+            main.appendChild(section)
+        }
+        function createP() {
+            const section = document.querySelector(".center-content")
+            const p = document.createElement("p")
+            p.innerHTML = "Criando parágrafo"
+            p.style.textAlign = "center"
+            p.style.color = "blue"
+            section.appendChild(p)
+        }
+        function createLeftSection() {
+            const main = document.querySelector("main")
+            const section = document.createElement("section")
+            section.className = "left-content"
+            main.appendChild(section)
+        }
+        function createRightSection() {
+            const main = document.querySelector("main")
+            const section = document.createElement("section")
+            section.className = "right-content"
+            main.appendChild(section)
+        }
+        function createImg() {
+            const section = document.querySelector(".left-content")
+            const img = document.createElement("img")
+            img.src = "https://picsum.photos/200"
+            img.className = "small-image"
+            section.appendChild(img)
+        }
+        function createUl() {
+            const numbers = ["um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez"]
+            const section = document.querySelector(".right-content")
+            const ul = document.createElement("ul")
+            let li;
+            for (let index = 0; index < numbers.length; index += 1) {
+                li = document.createElement("li")
+                li.innerHTML += numbers[index]
+                ul.appendChild(li)
+            }
+            section.appendChild(ul)
+        }
+        function createH3() {
+            const main = document.querySelector("main")
+            let h3;
+            for (let index = 0; index < 3; index += 1) {
+                h3 = document.createElement("h3")
+                h3.className = "description"
+                main.appendChild(h3)
+                h3.innerHTML = "opa"
+            }
+        }
+        function removerChild(){
+            const main = document.querySelector("main")
+            let section = document.querySelector(".left-content")            
+            main.removeChild(section)
+        }
+        function centerSection(){
+            const section = document.querySelector(".right-content")
+            section.style.margin = "auto"
+        }
+        function changeFatherColor(){
+            const section = document.querySelector(".center-content")
+            section.parentNode.style.background = "green"
+        }
+        function removeTwoElements(){
+           
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -51,12 +51,27 @@
     }
     changeCenter()
 
-    function fixText(){
+    function fixText() {
       const text = document.getElementsByTagName("h1")
       text[0].innerText = "Exercício - JavaEscript"
     }
     fixText()
-    
+
+    function firstText() {
+      const text = document.getElementsByTagName("p")
+      console.log(text[0].innerText.toUpperCase())
+      
+    }
+    firstText()
+
+    function showAllElements() {
+      const text = document.getElementsByTagName("p")
+      for (let index = 0; index < text.length; index += 1) {
+        console.log(text[index])
+      }
+    }
+    showAllElements()
+
   </script>
 </body>
 
