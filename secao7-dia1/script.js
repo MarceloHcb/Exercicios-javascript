@@ -3,16 +3,15 @@
 // Modifique a estrutura da função para que ela seja uma arrow function;
 // Modifique as variáveis para que respeitem o escopo onde estão declaradas;
 // Modifique as concatenações para template literals.
-function testingScope(escopo) {
+const  testingScope =(escopo) => {
     if (escopo === true) {
-      const ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
-      ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
+      let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+      ifScope = `${ifScope}  ótimo, fui utilizada no escopo !`
       console.log(ifScope);
     } else {
       const elseScope = 'Não devo ser utilizada fora do meu escopo (else)';
       console.log(elseScope);
-    }
-    console.log(`${ifScope}  o que estou fazendo aqui ? :O`); // Se necessário esta linha pode ser removida.
+    }    
   }
 
   testingScope(true);
@@ -21,12 +20,18 @@ function testingScope(escopo) {
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-const sortOddsAndEvens = () => {
+const sortOddsAndEvens = (param) =>  param.sort((a,b)=> a-b)
+console.log(sortOddsAndEvens(oddsAndEvens)); // será necessário alterar essa linha 😉
 
-// Seu código aqui.
+const albuns = [
+    {name:"Iron Mainden", year:1980},
+    {name:"Killers", year:1981},
+    {name:"The Number of the Beast", year:1982},
+    {name:"aaaaaaa", year:1989},
+]
 
-console.log(oddsAndEvens); // será necessário alterar essa linha 😉
-
-// Crie uma função que faça com que o array oddsAndEvens fique em ordem crescente;
-// Utilize template literals para que a chamada console.log(<seu código>oddsAndEvens<seu código>); retorne a frase “Os números 2,3,4,7,10,13 se encontram ordenados de forma crescente!”.
-// Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort(). Spoiler: É possível realizar uma função que ordene qualquer array de números.
+const sorted = albuns.sort((a,b)=>{
+    // return b.year - a.year
+    return a.name.localeCompare(b.name)
+})
+console.log(sorted)
