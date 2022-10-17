@@ -4,6 +4,7 @@
   }
   
   body{
+<<<<<<< HEAD
     text-align: center;
   }
   
@@ -11,6 +12,18 @@
     display: inline-block;
     border: black solid 1px;
     padding: 30px;
+=======
+    text-align: center; 
+    background-color: rgb(8,53,34);;
+  }
+ 
+  main{
+    display: inline-block;
+    border: black solid 1px;
+    padding: 50px;
+    width: 60%;
+    background-color: #DBEBD1;
+>>>>>>> fa99e07ed9dade23cfe85d5a22f906cc3351726e
   }
   
   .header-trybe{
@@ -19,14 +32,26 @@
     height: 130px;
     border: black 1px solid;
     margin-bottom: 25px;
+<<<<<<< HEAD
   }
   
   .header-trybe img{
+=======
+    background-color: #DBEBD1;
+    height: 20%;
+  }
+  
+  .header-trybe img{    
+>>>>>>> fa99e07ed9dade23cfe85d5a22f906cc3351726e
     margin-top: 12px;
     height: 70px;
   }
   
   .form-section {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> fa99e07ed9dade23cfe85d5a22f906cc3351726e
     text-align: left;
     margin: 25px;
   }
@@ -41,7 +66,11 @@
     width: 30%;
     padding: 20px;
     margin-top: 20px;
+<<<<<<< HEAD
     font-size: 18px;
+=======
+    font-size: 18px;   
+>>>>>>> fa99e07ed9dade23cfe85d5a22f906cc3351726e
   }
   
   li{
@@ -62,4 +91,29 @@
   textarea{
     box-sizing: content-box;
     padding: 10px;
+<<<<<<< HEAD
   }
+=======
+
+  }
+  .h3{
+    font-size: 40px;
+  }
+    
+  .hotel-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media(max-width: 700px){
+    button{
+      width: 100%
+    }
+    h2{
+      font-size: 30px;
+    }
+  }
+ 
+>>>>>>> fa99e07ed9dade23cfe85d5a22f906cc3351726e
