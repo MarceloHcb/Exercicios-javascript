@@ -159,8 +159,25 @@
             section.parentNode.style.background = "green"
         }
         function removeTwoElements(){
-           
+            let section = document.querySelector(".right-content")  
+            const ul = document.querySelector("ul")
+            const li = document.querySelectorAll("li")
+            console.log(li)
             
+            for (let index = 0; index < li.length; index++) {
+                let liIndex = li[index]                
+                if(liIndex.innerText.includes("dez")){
+                 ul.lastChild.remove()
+                    
+                }   
+                else if (liIndex.innerText.includes("nove")){
+                    ul.lastChild.remove()
+                }                       
+                
+            }
+            ul.lastChild.remove()
+            ul.lastChild.remove()        
+          
         }
 
     </script>

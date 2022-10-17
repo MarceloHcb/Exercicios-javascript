@@ -153,4 +153,9 @@
     margin: 0px;
     padding: 10px 0;
   }
+  #btn-holiday{
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+  }
   
