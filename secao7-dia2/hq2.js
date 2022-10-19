@@ -1,4 +1,3 @@
-
 const hq2 = {
     collection: "Worder Woman",
     title:"A Twist of Fate",
@@ -15,5 +14,6 @@ const author2 = {
 };
 console.log(Object.assign(hq2, author, author2));
 const clone = Object.assign({}, hq2)
-clone.nova = "oi"
+clone.nova = "oi";
+clone.outra = "";
 console.log(clone);
