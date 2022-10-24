@@ -11,25 +11,18 @@ const substituaX = (param) => {
     const nova = frase.split(" ")
     nova[1] = param
     console.log(nova);
-
 }
 substituaX(param)
 
 const substituaX2 = (param) => {
     const frase = 'Tryber x aqui!'
-    let result = frase.replace("x", `${param}`)   
-    
-        console.log(result);
+    let result = frase.replace("x", `${param}`)
+    console.log(result);
 }
 substituaX2("Marcelo")
 
 const palindromo = (palavra) => {
-
     let result = (palavra.split("").reverse().join("") === palavra) ? console.log("Palindromo") : console.log("não é palindromo")
-
     return result
 }
 palindromo("ovo")
-
-
-
