@@ -1,7 +1,7 @@
 let name = "Marcelo Henrique"
 let email = "mclo@mclo.com"
 function completeName(name) {
-  const nameData = name.split(' ').join('').toLowerCase()
+  const nameData = name.split(' ').join('_').toLowerCase()
   return { name, email: `${nameData}@trybe.com` };
 }
 const newEmployees = () => {
