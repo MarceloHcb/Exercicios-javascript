@@ -1,22 +1,20 @@
 let name = "Marcelo Henrique"
 let email = "mclo@mclo.com"
-function completeName(name, email) {
-return {
-    nomeCompleto: name,
-    email: email,
+function completeName(name) {
+  const nameData = name.split(' ').join('_').toLowerCase()
+  return { name, email: `${nameData}@trybe.com` };
 }
-}
-console.log(completeName("mclo","mclo@mclo.mclo"));
-const newEmployees = (completeName) => {     
+const newEmployees = () => {
 
-        const employees = {
-            id1: '', // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-            id2: '', // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-            id3: '', // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
-          }        
-        
-        return employees;    
-   
+  const employees = {
+    id1: completeName('Pedro Guerra'),
+    id2: completeName("Luiza Drumond"),
+    id3: completeName("Carla Paiva")
+  }
+  return employees
 }
-newEmployees()
-// console.log(newEmployees(completeName("Marcelo", "mclo@mclo.com")));
+console.log(completeName("Marcelo Henrique"))
+console.log(newEmployees(completeName("Marcelo Henrique")))
+
+
+
