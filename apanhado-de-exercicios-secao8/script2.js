@@ -61,3 +61,27 @@ function fantasyOrScienceFictionAuthors() {
   }
 
 //   console.log(fantasyOrScienceFictionAuthors());
+
+// Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+
+function oldBooks() {
+    const corYear = new Date().getFullYear()
+    return books
+    .filter(({releaseYear}) => corYear - releaseYear > 60)
+    .map(({name}) => name)
+  }
+//   console.log(oldBooks());
+
+// return books.find((book) => (
+//     book.author.name.split(' ')
+//       .filter((word) => word.endsWith('.')).length === 3
+//   )).name;
+// }
+
+// Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+
+function authorWith3DotsOnName() {
+    return books.filter(({author}) => author.name[1] === "." && author.name[4] === "." && author.name[7] === ".")
+  }
+console.log(authorWith3DotsOnName());
